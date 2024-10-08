@@ -14,14 +14,15 @@ class student_signup_form(UserCreationForm):
 
 	class Meta:
 		model=User
-		fields=('ID_No','first_name','last_name','email','department','username','password1','password2')
+		fields=('ID_No','first_name','last_name','email','department','username')
+		
 
 	def clean_confirm_password(self):
 		password1 = self.cleaned_data.get('password1')
 		password2 = self.cleaned_data.get('password2')
-		if password != confirm_password:
+		if password1 != password2:
 			raise forms.ValidationError("Password Mismatch")
-		return confirm_password
+		return password2
 
 	
 

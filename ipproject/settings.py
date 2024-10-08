@@ -40,6 +40,7 @@ INSTALLED_APPS = [
     'portal',
     'django_cleanup',
     'material',
+    # 'django_cleanup.apps.CleanupConfig',
     'crispy_forms',
 ]
 
@@ -134,3 +135,6 @@ EMAIL_HOST_USER = '' # add sender's mail id
 EMAIL_HOST_PASSWORD = "" # write password to access the sender mail
 EMAIL_PORT = 587
 EMAIL_USE_TLS = True
+
+
+DEFAULT_AUTO_FIELD = 'django.db.models.BigAutoField'
